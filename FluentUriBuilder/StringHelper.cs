@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace FluentUri
+namespace FluentUriBuilder
 {
     internal static class StringHelper
     {
