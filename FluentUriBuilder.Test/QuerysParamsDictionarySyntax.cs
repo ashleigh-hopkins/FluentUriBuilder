@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
-namespace FluentUriBuilder.Test
+namespace FluentUri.Test
 {
     public class QueryParamsDictionarySyntax
     {

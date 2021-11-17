@@ -1,4 +1,4 @@
-﻿namespace FluentUriBuilder.Test
+﻿namespace FluentUri.Test
 {
     static class TestData
     {

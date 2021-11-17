@@ -2,7 +2,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace FluentUriBuilder.Test
+namespace FluentUri.Test
 {
     public class Path
     {
