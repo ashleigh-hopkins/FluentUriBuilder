@@ -1,4 +1,4 @@
-﻿namespace FluentUri
+﻿namespace FluentUriBuilder
 {
     public enum UriScheme
     {
