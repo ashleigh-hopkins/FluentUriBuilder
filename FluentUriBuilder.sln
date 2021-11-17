@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentUriBuilder", "FluentUriBuilder\FluentUriBuilder.csproj", "{AD1F337D-052C-4E05-A525-4D0E6541E53C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentUriBuilder", "FluentUriBuilder\FluentUriBuilder.csproj", "{AD1F337D-052C-4E05-A525-4D0E6541E53C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentUriBuilder.Test", "FluentUriBuilder.Test\FluentUriBuilder.Test.csproj", "{94578615-C024-4736-A34B-7A8F45C29748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentUriBuilder.Test", "FluentUriBuilder.Test\FluentUriBuilder.Test.csproj", "{94578615-C024-4736-A34B-7A8F45C29748}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{249EC073-30F5-4625-93E7-C750878A4A97}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		.github\workflows\ci.yml = .github\workflows\ci.yml
 		LICENSE.txt = LICENSE.txt
-		publish-nuget.cmd = publish-nuget.cmd
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -32,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA6D1EFF-799C-44E8-B6F7-D36571126BC2}
 	EndGlobalSection
 EndGlobal

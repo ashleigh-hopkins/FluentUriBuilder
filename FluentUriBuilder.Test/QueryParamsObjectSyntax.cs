@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
-namespace FluentUri.Test
+namespace FluentUriBuilder.Test
 {
     public class QueryParamsObjectSyntax
     {
@@ -11,7 +11,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParams((object)null))
-                .ShouldThrow<ArgumentNullException>();
+                .Should().Throw<ArgumentNullException>();
         }
 
         [Fact]

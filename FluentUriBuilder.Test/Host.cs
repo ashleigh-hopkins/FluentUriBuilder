@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
-namespace FluentUri.Test
+namespace FluentUriBuilder.Test
 {
     public class Host
     {
@@ -11,13 +11,13 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(null))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(string.Empty))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(" "))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]

@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
-namespace FluentUri.Test
+namespace FluentUriBuilder.Test
 {
     public class QueryParamsDictionarySyntax
     {
@@ -12,7 +12,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParams(null))
-                .ShouldThrow<ArgumentNullException>();
+                .Should().Throw<ArgumentNullException>();
         }
 
         [Fact]

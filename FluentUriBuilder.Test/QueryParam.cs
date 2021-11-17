@@ -1,8 +1,8 @@
-﻿using FluentAssertions;
-using System;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
-namespace FluentUri.Test
+namespace FluentUriBuilder.Test
 {
     public class QueryParam
     {
@@ -11,13 +11,13 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam(null, "a"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam(string.Empty, "a"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam(" ", "a"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]
@@ -25,13 +25,13 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam("a", (string)null))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam("a", string.Empty))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParam("a", " "))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]

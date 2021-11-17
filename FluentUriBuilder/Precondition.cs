@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FluentUri
+namespace FluentUriBuilder
 {
     internal static class Precondition
     {

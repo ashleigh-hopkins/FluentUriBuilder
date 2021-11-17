@@ -1,12 +1,8 @@
-﻿using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using FluentAssertions;
 using Xunit;
 
-namespace FluentUri.Test
+namespace FluentUriBuilder.Test
 {
     public class Port
     {
@@ -15,7 +11,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(-2))
-                .ShouldThrow<ArgumentOutOfRangeException>();
+                .Should().Throw<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -23,7 +19,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(-1))
-                .ShouldNotThrow<ArgumentOutOfRangeException>();
+                .Should().NotThrow<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -31,7 +27,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(65536))
-                .ShouldThrow<ArgumentOutOfRangeException>();
+                .Should().Throw<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -39,7 +35,7 @@ namespace FluentUri.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(65535))
-                .ShouldNotThrow<ArgumentOutOfRangeException>();
+                .Should().NotThrow<ArgumentOutOfRangeException>();
         }
 
         [Fact]
