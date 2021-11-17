@@ -44,7 +44,7 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.5
 
     - name: Build
-      run: dotnet build FluentUriBuilder.sln --configuration Release -p:Version=$env:BUILD_VERSION
+      run: dotnet build FluentUriBuilder.sln --configuration Release -p:Version=${{env.BUILD_VERSION}}
 
     - name: Test
       run: dotnet test FluentUriBuilder.sln --no-restore --verbosity minimal --logger GitHubActions --configuration Release
