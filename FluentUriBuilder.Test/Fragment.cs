@@ -11,7 +11,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Fragment(null))
-                .ShouldThrow<ArgumentNullException>();
+                .Should().Throw<ArgumentNullException>();
         }
 
         [Fact]

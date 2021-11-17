@@ -11,13 +11,13 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(null))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(string.Empty))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Host(" "))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]

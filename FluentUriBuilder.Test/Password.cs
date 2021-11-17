@@ -11,13 +11,13 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials(null, "password"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials(string.Empty, "password"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials(" ", "password"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]
@@ -25,13 +25,13 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials("user", null))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials(string.Empty, "user"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
             FluentUriBuilder.Create()
                 .Invoking(b => b.Credentials(" ", "user"))
-                .ShouldThrow<ArgumentException>();
+                .Should().Throw<ArgumentException>();
         }
 
         [Fact]

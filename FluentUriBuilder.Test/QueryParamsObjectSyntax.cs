@@ -11,7 +11,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.QueryParams((object)null))
-                .ShouldThrow<ArgumentNullException>();
+                .Should().Throw<ArgumentNullException>();
         }
 
         [Fact]

@@ -11,7 +11,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(-2))
-                .ShouldThrow<ArgumentOutOfRangeException>();
+                .Should().Throw<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -19,7 +19,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(-1))
-                .ShouldNotThrow<ArgumentOutOfRangeException>();
+                .Should().NotThrow<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -27,7 +27,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(65536))
-                .ShouldThrow<ArgumentOutOfRangeException>();
+                .Should().Throw<ArgumentOutOfRangeException>();
         }
 
         [Fact]
@@ -35,7 +35,7 @@ namespace FluentUriBuilder.Test
         {
             FluentUriBuilder.Create()
                 .Invoking(b => b.Port(65535))
-                .ShouldNotThrow<ArgumentOutOfRangeException>();
+                .Should().NotThrow<ArgumentOutOfRangeException>();
         }
 
         [Fact]
